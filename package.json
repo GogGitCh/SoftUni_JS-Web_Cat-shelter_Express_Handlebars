@@ -19,7 +19,9 @@
   "homepage": "https://github.com/GogGitCh/SoftUni_JS-Web_Cat-shelter_Express_Handlebars#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.7"
+    "express-handlebars": "^7.0.7",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
