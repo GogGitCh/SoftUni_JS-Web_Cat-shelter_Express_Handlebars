@@ -6,3 +6,5 @@ const breedSchema = new mongoose.Schema({
 
 const Breed = mongoose.model('Breed', breedSchema);
 
+module.exports = Breed;
+

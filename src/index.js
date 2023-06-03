@@ -1,6 +1,7 @@
 const express = require('express');
 const expressCofigurator = require('./config/expressConfig');
 const handlebarsCofigurator = require('./config/handlebarsConfig');
+const dbConnect = require('./config/dbConfig')
 const router = require('./routes');
 const app = express();
 const PORT = 5000;
@@ -10,6 +11,9 @@ handlebarsCofigurator(app)
 
 //Setting up server whith express
 expressCofigurator(app)
+
+//Connectiong to DB
+dbConnect()
 
 app.use(router)
 
