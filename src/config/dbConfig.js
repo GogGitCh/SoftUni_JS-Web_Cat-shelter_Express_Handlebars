@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const dbString = 'mongodb://127.0.0.1:27017/catShelter'
 
 
-async function main() {
+async function dbConnect() {
     await mongoose.connect(dbString,{
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -12,4 +12,4 @@ async function main() {
     console.log('DB: CatShelter - CONNECTED!');
 }
 
-main();
+module.exports = dbConnect();
