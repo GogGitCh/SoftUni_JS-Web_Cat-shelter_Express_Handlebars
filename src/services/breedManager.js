@@ -5,3 +5,5 @@ exports.create = async (breedData) => {
     const breed = new Breed(breedData);
     await breed.save()
 };  
+
+exports.getAll = () => Breed.find();

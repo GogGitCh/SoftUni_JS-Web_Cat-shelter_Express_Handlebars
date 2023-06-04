@@ -1,8 +1,11 @@
 const router = require('express').Router();
+const breedManager = require('../services/breedManager')
 
-router.get('/addCat',(req, res) => {
-    console.log('in addCat');
-    res.render('addCat')
+
+router.get('/addCat', async (req, res) => {
+    const catBreeds = await breedManager.getAll().lean();
+    console.log(catBreeds);
+    res.render('addCat', {'catBreeds':catBreeds} );
 });
 
 
